@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+
+# Production & coverage
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Local env files
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.pem
+.idea/
+.vscode/
+
+# Local development uploads fallback
+.local-uploads/
