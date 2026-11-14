@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme-provider";
+import { CurrencyProvider } from "@/components/currency-provider";
+import { getIntegrationCapabilities } from "@/lib/env";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +20,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  const { clerkConfigured } = getIntegrationCapabilities();
+
+  const content = (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <ThemeProvider
@@ -26,10 +31,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Toaster richColors position="top-right" />
+          <CurrencyProvider>
+            {children}
+            <Toaster richColors position="top-right" />
+          </CurrencyProvider>
         </ThemeProvider>
       </body>
     </html>
   );
+
+  if (clerkConfigured) {
+    return <ClerkProvider>{content}</ClerkProvider>;
+  }
+
+  return content;
 }

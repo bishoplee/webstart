@@ -9,9 +9,9 @@ This document defines the structured, phase-by-phase engineering plan for buildi
 | Phase | Name | Primary Deliverable | Status |
 | :--- | :--- | :--- | :--- |
 | **Phase 0** | Repository & Architecture Foundation | Architecture docs, Next.js + Bun + Tailwind + shadcn/ui + TypeScript foundation | Completed |
-| **Phase 1** | Database, Auth & Multi-Tenant RBAC | Neon + Drizzle schema & migrations, Clerk integration, workspace sync & RBAC guards | Pending |
-| **Phase 2** | Public Website & Administrative Foundation | Public pages (`/` to `/terms`), Agency Dashboard, Client & Project CRUD, Search & Filters | Pending |
-| **Phase 3** | Adaptive Questionnaire Engine & Client Portal | 7 adaptive templates, 11 sections, conditional logic, token auth, debounced autosave, wizard UI | Pending |
+| **Phase 1** | Database, Auth & Multi-Tenant RBAC | Neon + Drizzle schema & migrations, Clerk integration, workspace sync & RBAC guards | Completed |
+| **Phase 2** | Public Website & Administrative Foundation | Public pages (`/` to `/terms`), Agency Dashboard, Client & Project CRUD, Search & Filters | Completed |
+| **Phase 3** | Adaptive Questionnaire Engine & Client Portal | 7 adaptive templates, 11 sections, conditional logic, token auth, debounced autosave, wizard UI | Completed |
 | **Phase 4** | File Uploads & Administrative Review System | Storage adapter (Cloudinary), magic-byte validation, section review, clarifications, audit logs | Pending |
 | **Phase 5** | Project Document Generation (20-Section Brief) | Deterministic brief builder, HTML preview, printable layout, Markdown & PDF exports, versioning | Pending |
 | **Phase 6** | Notifications, Reporting & Analytics | Resend email integration with graceful fallback, live reporting charts & metrics | Pending |
